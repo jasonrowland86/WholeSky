@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css?family=El+Messiri|Montserrat|Noto+Sans|Roboto+Mono');
+
+/* Whole App */
+* {
+  box-sizing: border-box;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Helvetica'; */
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+.overlay {
+  background-color: rgba(235, 232, 229, .9);
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  text-align: center;
+}
+.overlay h1 {
+  margin-top: 35vh;
+  font-size: 4em;
+  letter-spacing: .05em;
+  color: rgba(14, 15, 15, .8);
+  font-family: 'El Messiri', sans-serif;
+}
+
+/* Nav */
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.nav-main {
+  display: flex;
+  flex-direction: row;
+}
+.nav-left {
+  flex: 1;
+  z-index: 3;
+}
+.nav-w-color {
+  display: flex;
+  background: #EBE8E5;
+}
+.active {
+  font-weight: bolder;
+  border-bottom: 1px solid black;
+  height: 1.5em;
+}
+.nav-link {
+  color: black;
+  margin: 1em;
+  margin-top: 2em;
+  padding: 0 .5em 0 .5em;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.nav-link:hover {
+  font-weight: bolder;
+  border-bottom: 1px solid black;
+  height: 1.5em;
+}
+.nav-link:before, .nav-link:after {
+  content: attr(link-attr);
+  text-decoration: inherit;
+}
+.nav-link:before {
+  font-weight: bold;
+  visibility: hidden;
+}
+.nav-link:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.header-logo {
+  width: 3em;
+  margin-left: -.2em;
+  margin-top: -1.3em;
+}
+.drop-down {
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(235, 232, 229, 1);
+  border-top: 5.3em solid #D4D1CE;
+  border-bottom: 1px solid #D4D1CE;
+}
+.drop-down-links {
+  flex-direction: column;
+}
+.drop-down-landing {
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(14, 15, 15, .9);
+  border-top: 5.3em solid rgba(14, 15, 15, .5);
+}
+.nav-menu {
+  display: none;
+}
+.drop-down-hide {
+  display: none;
+}
+.icon {
+  margin-top: .3em;
+}
+
+/* Main content of each page */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+}
+
+/* Landing */
+.hand-white {
+  width: 3em;
+  margin: -.7em;
+  margin-left: -.8em;
+}
+.landing {
+  flex: 1;
+  text-align: center;
+  background-color: black;
+  background-image: url("/photos/Dan-hands.jpg");
+}
+.landing-title {
+  color: white;
+  font-family: 'El Messiri', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-weight: lighter;
+  letter-spacing: .1em;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 30vh;
+  align-self: center;
+}
+.landing-title:hover {
+  cursor: pointer;
+}
+.landing-title h1 {
+  font-size: 11vw;
+  margin: 0;
+}
+.landing-title h3 {
+  font-size: 6vw;
+  margin: 0;
+  margin-top: -.8em;
+}
+.landing-nav {
+  color: white;
+  height: 1.5em;
+}
+.landing-nav:hover {
+  border-bottom: 1px solid white;
+}
+.landing-logo {
+  margin-left: .7em;
+  margin-top: 1em;
+}
+.landing-nav-hack {
+  flex: 1;
+}
+
+/* Services */
+.service-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.service-left {
+  width: 30vw;
+}
+.services {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1em;
+  margin-top: 5em;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+.service h3 {
+  margin: 0;
+  margin-top: 1em;
+}
+.service-description p {
+  margin-bottom: 0;
+}
+.service-right {
+  flex: 1;
+}
+.massage-img {
+  width: 65vw;
+  margin-top: 5em;
+  margin-bottom: 5vh;
+}
+.service-images {
+  text-align: center;
+}
+
+/* About */
+.about {
+  display: flex;
+  margin-top: 10vh;
+}
+.about-img {
+  width: 40vw;
+  margin-bottom: 3em;
+  margin-top: 5em;
+}
+.about-left {
+  text-align: center;
+  flex: 1;
+}
+.about-left p{
+  text-align:left;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+.about-right {
+  margin-top: 5em;
+  width: 50vw;
+}
+.about-right h3{
+  margin: 0;
+  /* text-align: center; */
+}
+.about-text {
+  margin-bottom: 3em;
+  width: 45vw;
+}
+.about-text h3 {
+  display: inline;
+}
+.inline {
+  display: inline;
+}
+.about-p-mobile {
+  display: none;
+}
+
+/* Contact */
+.contact {
+  flex: 1;
+  text-align: center;
+}
+.map {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  margin-top: 10em;
+}
+.contact-heading {
+  margin-top: 7em;
+  margin-bottom: 0;
+}
+.media-links {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+}
+.media-links a{
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25em;
+}
+hr {
+  width: 60%;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 5vh;
+}
+.contactform-label {
+  margin-bottom: 1em;
+}
+#connect {
+  font-size: 20px;
+  margin-bottom: 3vh;
+  color: #222324;
+}
+#email-invalid {
+  color: white;
+  display: none;
+}
+#gform {
+  align-self: center;
+  width: 50vw;
+}
+form-item {
+  display: flex;
+}
+label {
+  color: #222324;
+}
+input {
+  padding: 3px;
+  outline: none;
+}
+textarea {
+  width: 40vw;
+  height: 75px;
+}
+.comment {
+
+}
+.submit {
+  background: #E3E0DD;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;;
+  margin-top: 3vh;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+.submit:hover {
+  cursor: pointer;
+  color: white;
+  background: #222324;
+  transition: .1s;
+}
+.thank-you {
+  display: none;
+}
+
+/* Links */
+
+.links {
+  text-align: center;
+  margin-top: 3em;
+}
+.links hr {
+  margin: 1em auto;
+}
+.link {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+/***** Media Queries *****/
+
+@media only screen and (max-width: 750px) {
+
+  /* Services */
+  .service-content {
+    flex-direction: column-reverse;
+    margin-bottom: 2em;
+  }
+  .services {
+    flex-direction: column;
+    margin-top: 1.5em;
+    justify-content: center;
+  }
+  .service {
+    width: 60vw;
+    align-self: center;
+    margin-bottom: 0;
+  }
+  .service-left {
+    width: 100vw;
+    margin-bottom: 1.5em;
+  }
+  .service-right {
+    flex: 1;
+  }
+  .massage-img {
+    width: 90vw;
+    margin-bottom: 0;
+  }
+  .service-images {
+    text-align: center;
+  }
+
+  /* About */
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about-img {
+    margin-bottom: 1em;
+    width: 90vw;
+  }
+  .about-right {
+    width: 100vw;
+  }
+  .about-text {
+    margin: 0 auto;
+    margin-bottom: 3em;
+    width: 90vw;
+  }
+  .about-p-desktop {
+    display: none;
+  }
+  .about-p-mobile {
+    display: block;
+  }
+
+  /* Links */
+  .link {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .name {
+    width: 40vw;
+  }
+  .email {
+    width: 40vw;
+  }
+}
+
+/* For Mobile Devices*/
+@media only screen and (max-width: 400px) {
+  .nav-right {
+    display: none;
+  }
+  .nav-menu {
+    display: block;
+    margin: 1em;
+  }
+  .nav-menu:hover {
+    cursor: pointer;
+  }
+  .landing-nav-menu {
+    /* display: block; */
+    margin: 1em;
+  }
+  .drop-down {
+    /* background: #D4D1CE; */
+  }
+  .drop-down-hide {
+    display: inline-block;
+  }
+  .nav-link {
+    margin: 1em;
+    margin-top: 2em;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 30vw;
+    height: 1.5em;
+    font-size: 1.5em;
+    margin: 1em auto;
+    border-bottom: 1px solid black;
+  }
+  .nav-link:hover {
+
+  }
+
+  .active {
+
+  }
+  .header-logo {
+    width: 3em;
+    margin-left: -1em;
+    margin-top: -.7em;
+  }
+
+
+  /* Landing Page */
+  .landing-title {
+    width: 100vw;
+  }
+  .landing-title h1 {
+    font-size: 13vw;
+    margin: 0;
+  }
+  .landing-title h3 {
+    font-size: 8vw;
+  }
+  .landing-nav {
+    border-bottom: 1px solid white;
+  }
+  .landing-nav:hover {
+
+  }
+
+  /* Contact Form */
+  textarea {
+    width: 50vw;
+  }
+  #gform {
+    align-self: center;
+    width: 90vw;
+  }
+
+  /* Services */
+  .services {
+    /* flex-direction: column; */
+    margin: 0 auto;
+  }
+  .service {
+    width: 60vw;
+    align-self: center;
+  }
+  .service-left {
+    width: 100vw;
+    margin-bottom: 1.5em;
+  }
+
+  /* About Page */
+  .about-p-desktop {
+    display: none;
+  }
+  .about-text {
+    margin-bottom: 0;
+  }
+  .about-img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
